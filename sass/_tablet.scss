@@ -1,0 +1,283 @@
+@media (min-width: 601px) and (max-width: 1000px){
+    header{
+        .nav-container{
+    
+            .logo{
+                img{
+                    max-height: 66px;
+                }
+            }
+        
+            
+            nav{
+                margin-left: -66px;
+        
+        
+                ul{
+                    li{
+                        margin-left: 1rem;
+        
+                        a{
+                            padding: .5rem;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-link{
+    
+        .btn{
+            font-size: 1rem;
+        }
+    
+    }
+     
+    
+    .intro{
+        margin-top: 11rem;
+
+        h4{
+            font-size: 1.5rem;
+        }
+
+        .text{
+            width: 100%;
+            font-size: 1.1rem;
+            margin-top: 0rem;
+            line-height: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        #mangoesPic{
+            height: 380px;
+            max-width: 620px;
+            margin-top: 3rem;
+        }
+
+        
+    }
+
+    .about{
+        margin: 6rem 0;
+    
+        .container{
+            width: 70vw;
+            padding: 2rem 0 6rem 0;
+    
+            h2{
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+    
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .challenges{
+        width: 80vw;
+        margin-bottom: 6rem;
+    
+        .container1{
+    
+            h3{
+                font-size: 2.2rem;
+                margin-bottom: .3rem;
+            }
+    
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    
+        .container2{
+            margin-top: 4rem;
+    
+    
+            .box{
+    
+                h5{
+                    font-size: 2.4rem;
+                }
+    
+                p{
+                    font-size: 1rem;
+                    margin-top: .2rem;
+                }
+            }
+        }
+    }
+
+    .solutions{
+        margin-bottom: 6rem;
+        padding: 6rem 0;
+
+
+        .upper-container{
+            width: 80vw;
+            margin: 0 auto;
+
+            h4{
+                font-size: 2.4rem;
+            }
+
+            p{
+                font-size: 1.1rem;
+                margin-top: 0rem;
+            }
+        }
+
+        .lower-container{
+            width: 80vw;
+
+            .leftDiv{
+
+                .solution{
+                    margin-top: 3rem;
+
+                    .icon{
+
+
+                        .iconify{
+                            font-size: 4rem;
+                        }
+
+                    }
+
+
+                    .text{
+                        padding-top: .7rem;
+                        width: 100%;
+
+                        h6{
+                            font-size: 1.2rem;
+
+                        }
+
+                        p{
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+
+            .rightDiv{
+                display: none;
+            }
+        }
+    }
+
+    .bottom-section{
+        width: 80vw;
+        height: 450px;
+        margin-bottom: 8rem;
+    
+        .inner-left{
+            width: 50%;
+    
+        }
+    
+        .inner-right{
+            padding: 2rem;
+    
+            h6{
+                font-size: 1.2rem;
+            }
+    
+            p{
+                font-size: 1.1rem;
+                margin-top: 1rem;
+            }
+    
+            .btn-link{
+            
+                .btn{
+                    font-size: .7rem;
+                }
+            }
+    
+            .socials{
+    
+                ul{
+                    display: flex;
+                    gap: .5rem;
+                    margin-left: -.5rem;
+    
+                    li{
+                        list-style-type: none;
+                        margin-bottom: 1rem;
+                        transition: .5s ease;
+    
+                        a{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    footer{
+        width: 80vw;
+    
+        .footer-container{
+    
+            .logo{
+    
+                img{
+                    height: 120px;
+                }
+            }
+    
+            .links{
+    
+                ul{
+    
+                    li{
+                        margin-bottom: 1rem;
+    
+                        a{
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+    
+            .connect{
+    
+                p{
+                    font-size: 1.2rem;
+                }
+    
+                .socials{
+                    margin-top: 2rem;
+        
+                    ul{
+                        gap: .5rem;
+    
+                        li{
+                            margin-bottom: .5rem;
+        
+                            a{
+                                font-size: 1.1rem;
+                                padding: .8rem;
+                            }
+                        }
+                    }
+                }
+    
+                #mailTo{
+                    font-size: 1.1rem;
+                    margin-top: 1rem;
+                }
+    
+            }
+        }
+    }
+
+
+}

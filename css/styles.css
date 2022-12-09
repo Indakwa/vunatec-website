@@ -1,0 +1,1084 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #102705;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0rem;
+  z-index: 99;
+}
+header .nav-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+  background-color: #102705;
+}
+@media (max-width: 1024px) {
+  header .nav-container {
+    padding-left: 34px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  header .nav-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+header .nav-container .logo img {
+  max-height: 86px;
+}
+header .nav-container nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -86px;
+}
+header .nav-container nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 1rem;
+}
+header .nav-container nav ul li a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #FEFFF3;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3125rem;
+  transition: 0.5s ease;
+}
+header .nav-container nav ul li a:hover {
+  color: #DF872C;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #FEFFF3;
+  margin: 6px 0px;
+  transition: 0.5s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: #102705;
+  padding-top: 150px;
+  transition: 0.5s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  padding: 12px 16px;
+  color: #FEFFF3;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #102705;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .hide-mob {
+    display: none;
+  }
+}
+.btn-link {
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  background: #DF872C;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  text-decoration: none;
+  border-radius: 40px;
+}
+.btn-link .btn {
+  background: inherit;
+  border: none;
+  color: #FEFFF3;
+  font-size: 1.25rem;
+  padding: 1.4rem 4rem;
+  border-radius: 40px;
+}
+.btn-link .btn:hover {
+  cursor: pointer;
+}
+.btn-link:hover {
+  background: #c27421;
+  transform: scale(1.1);
+}
+
+.scroll-space {
+  position: relative;
+  height: 16px;
+  width: 30px;
+  top: -8rem;
+  opacity: 0;
+}
+
+#home {
+  position: relative;
+  height: 0.01px;
+  top: -11rem;
+}
+
+#about {
+  position: relative;
+  height: 16px;
+  width: 30px;
+  opacity: 0;
+}
+
+.intro {
+  position: relative;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 11rem;
+}
+.intro h4 {
+  color: #9BBB59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.39rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.intro .text {
+  width: 80%;
+  margin: 0 auto;
+  color: #FEFFF3;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-top: 1.2rem;
+  line-height: 2.4rem;
+  margin-bottom: 4rem;
+}
+.intro #mangoesPic {
+  display: block;
+  height: 571px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.about {
+  position: relative;
+  margin: 8rem 0;
+  background: #FEFFF3;
+}
+.about .container {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 2rem 0 7rem 0;
+}
+.about .container h2 {
+  color: #102705;
+  font-size: 2.625rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 4rem;
+}
+.about .container p {
+  color: #DF872C;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.challenges {
+  position: relative;
+  width: 60vw;
+  margin: 0 auto;
+  color: #FEFFF3;
+  margin-bottom: 8rem;
+}
+.challenges .container1 h3 {
+  font-size: 2.625rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.3rem;
+}
+.challenges .container1 p {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: #9BBB59;
+}
+.challenges .container2 {
+  margin-top: 6rem;
+  display: flex;
+  gap: 4rem;
+}
+.challenges .container2 .box h5 {
+  font-size: 2.625rem;
+  font-family: "Poppins", sans-serif;
+}
+.challenges .container2 .box p {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.3rem;
+}
+
+.solutions {
+  position: relative;
+  background: #FEFFF3;
+  margin-bottom: 8rem;
+  text-align: start;
+  padding: 8rem 0;
+}
+.solutions .upper-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+.solutions .upper-container h4 {
+  font-size: 2.625rem;
+  font-family: "Poppins", sans-serif;
+  color: #102705;
+  font-weight: 600;
+}
+.solutions .upper-container p {
+  font-size: 1.3125rem;
+  color: #DF872C;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0.7rem;
+}
+.solutions .lower-container {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+}
+.solutions .lower-container .leftDiv .solution {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+.solutions .lower-container .leftDiv .solution .icon {
+  background: #102705;
+  color: #FEFFF3;
+  max-height: 116px;
+  min-width: 116px;
+  border-radius: 31.42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.solutions .lower-container .leftDiv .solution .icon .iconify {
+  font-size: 5.2rem;
+}
+.solutions .lower-container .leftDiv .solution .icon #drone {
+  width: 75px;
+}
+.solutions .lower-container .leftDiv .solution .text {
+  color: #102705;
+  padding-top: 0.7rem;
+  width: 70%;
+}
+.solutions .lower-container .leftDiv .solution .text h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3125rem;
+  font-weight: 600;
+}
+.solutions .lower-container .leftDiv .solution .text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.solutions .lower-container .rightDiv img {
+  max-width: 529px;
+  margin-top: 3.5rem;
+}
+
+.bottom-section {
+  position: relative;
+  border-radius: 26px;
+  background: #9BBB59;
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  margin: 0 auto;
+  color: #102705;
+  height: 450px;
+  margin-bottom: 8rem;
+}
+.bottom-section .inner-left {
+  width: 50%;
+}
+.bottom-section .inner-left img {
+  border-radius: 26px 0 0 26px;
+  height: 100%;
+  width: 100%;
+}
+.bottom-section .inner-right {
+  padding: 3rem;
+  text-align: start;
+  width: 50%;
+}
+.bottom-section .inner-right h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 500;
+}
+.bottom-section .inner-right p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+.bottom-section .inner-right .btn-link {
+  background: #102705;
+  margin-top: 2rem;
+}
+.bottom-section .inner-right .btn-link .btn {
+  color: #FEFFF3;
+  font-size: 0.8rem;
+}
+.bottom-section .inner-right .btn-link:hover {
+  background: #215b08;
+  transform: scale(1.1);
+}
+.bottom-section .inner-right .socials {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.bottom-section .inner-right .socials ul {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: -0.5rem;
+}
+.bottom-section .inner-right .socials ul li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  transition: 0.5s ease;
+}
+.bottom-section .inner-right .socials ul li a {
+  text-decoration: none;
+  transition: 0.5s ease;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: #102705;
+  transition: 0.5s ease;
+  padding: 0.8rem;
+}
+.bottom-section .inner-right .socials ul li a:hover {
+  color: #215b08;
+}
+.bottom-section .inner-right .socials ul li:hover {
+  transform: scale(1.3);
+}
+
+footer {
+  width: 70vw;
+  margin: 0 auto;
+  text-align: start;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-container .logo img {
+  height: 203px;
+}
+footer .footer-container .links ul li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+footer .footer-container .links ul li a {
+  text-decoration: none;
+  transition: 0.5s ease;
+  font-size: 1.3125rem;
+  font-family: "Montserrat", sans-serif;
+  color: #FEFFF3;
+}
+footer .footer-container .links ul li a:hover {
+  color: #DF872C;
+}
+footer .footer-container .connect {
+  color: #FEFFF3;
+}
+footer .footer-container .connect p {
+  font-size: 1.5625rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+footer .footer-container .connect .socials {
+  margin-top: 2rem;
+}
+footer .footer-container .connect .socials ul {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: -1rem;
+}
+footer .footer-container .connect .socials ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  transition: 0.5s ease;
+}
+footer .footer-container .connect .socials ul li a {
+  text-decoration: none;
+  transition: 0.5s ease;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #FEFFF3;
+  padding: 1rem;
+}
+footer .footer-container .connect .socials ul li a:hover {
+  color: #DF872C;
+}
+footer .footer-container .connect .socials ul li:hover {
+  transform: scale(1.3);
+}
+footer .footer-container .connect #mailTo {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #FEFFF3;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+footer .footer-container .connect #mailTo:hover {
+  color: #DF872C;
+}
+footer hr {
+  margin: 3rem 0 2rem 0;
+}
+footer #copy {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #FEFFF3;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding-top: 0;
+  }
+  header .nav-container .logo img {
+    height: 66px;
+  }
+  header .nav-container nav {
+    display: none;
+  }
+  .btn-link {
+    border-radius: 40px;
+  }
+  .btn-link .btn {
+    font-size: 0.8rem;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+  }
+  .intro {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 9rem;
+  }
+  .intro h4 {
+    font-size: 1.35rem;
+    margin-bottom: 1.2rem;
+  }
+  .intro .text {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .intro #mangoesPic {
+    height: auto;
+    width: 86vw;
+    margin-top: 2rem;
+  }
+  .about {
+    margin: 4rem 0;
+  }
+  .about .container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1rem 0 3.5rem 0;
+  }
+  .about .container h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .about .container p {
+    font-size: 1rem;
+  }
+  .challenges {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .challenges .container1 h3 {
+    font-size: 1.4rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0.3rem;
+  }
+  .challenges .container1 p {
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #9BBB59;
+  }
+  .challenges .container2 {
+    margin-top: 3rem;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+  .challenges .container2 .box {
+    width: 60vw;
+    margin: 0 auto;
+  }
+  .challenges .container2 .box h5 {
+    font-size: 2rem;
+  }
+  .challenges .container2 .box p {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+  .solutions {
+    margin-bottom: 4rem;
+    padding: 4rem 0;
+  }
+  .solutions .upper-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .solutions .upper-container h4 {
+    font-size: 1.5rem;
+  }
+  .solutions .upper-container p {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+  }
+  .solutions .lower-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .solutions .lower-container .leftDiv .solution {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .solutions .lower-container .leftDiv .solution .icon {
+    display: none;
+  }
+  .solutions .lower-container .leftDiv .solution .text {
+    padding-top: 0.7rem;
+    width: 100%;
+  }
+  .solutions .lower-container .leftDiv .solution .text h6 {
+    font-size: 1.1rem;
+  }
+  .solutions .lower-container .leftDiv .solution .text p {
+    font-size: 1rem;
+  }
+  .solutions .lower-container .rightDiv {
+    display: none;
+  }
+  .bottom-section {
+    flex-direction: column;
+    width: 80vw;
+    min-height: 630px;
+    margin-bottom: 4rem;
+  }
+  .bottom-section .inner-left {
+    width: 100%;
+    height: 50%;
+  }
+  .bottom-section .inner-left img {
+    border-radius: 26px 26px 0 0px;
+  }
+  .bottom-section .inner-right {
+    width: 100%;
+    padding: 1rem;
+  }
+  .bottom-section .inner-right h6 {
+    font-size: 1.1rem;
+  }
+  .bottom-section .inner-right p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .bottom-section .inner-right .btn-link {
+    display: block;
+    width: 65%;
+    text-align: center;
+  }
+  .bottom-section .inner-right .btn-link .btn {
+    font-size: 0.8rem;
+  }
+  .bottom-section .inner-right .socials {
+    width: 72%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 0.4rem;
+  }
+  .bottom-section .inner-right .socials ul {
+    gap: 0rem;
+    margin-left: 0rem;
+  }
+  .bottom-section .inner-right .socials ul li {
+    margin-bottom: 1rem;
+  }
+  .bottom-section .inner-right .socials ul li a {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+  footer {
+    width: 70vw;
+    margin: 0 auto;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  footer .footer-container .logo {
+    margin-bottom: 2rem;
+  }
+  footer .footer-container .logo img {
+    height: 90px;
+  }
+  footer .footer-container .links ul li {
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .links ul li a {
+    font-size: 1rem;
+  }
+  footer .footer-container .connect {
+    margin-top: 1rem;
+  }
+  footer .footer-container .connect p {
+    font-size: 1.1rem;
+  }
+  footer .footer-container .connect .socials {
+    margin-top: 1rem;
+  }
+  footer .footer-container .connect .socials ul {
+    gap: 0.2rem;
+    margin-left: 0rem;
+  }
+  footer .footer-container .connect .socials ul li {
+    margin-bottom: 0.5rem;
+  }
+  footer .footer-container .connect .socials ul li a {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+  footer .footer-container .connect #mailTo {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+  footer hr {
+    display: none;
+  }
+  footer #copy {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  header .nav-container .logo img {
+    max-height: 66px;
+  }
+  header .nav-container nav {
+    margin-left: -66px;
+  }
+  header .nav-container nav ul li {
+    margin-left: 1rem;
+  }
+  header .nav-container nav ul li a {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .btn-link .btn {
+    font-size: 1rem;
+  }
+  .intro {
+    margin-top: 11rem;
+  }
+  .intro h4 {
+    font-size: 1.5rem;
+  }
+  .intro .text {
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 0rem;
+    line-height: 2rem;
+    margin-bottom: 3rem;
+  }
+  .intro #mangoesPic {
+    height: 380px;
+    max-width: 620px;
+    margin-top: 3rem;
+  }
+  .about {
+    margin: 6rem 0;
+  }
+  .about .container {
+    width: 70vw;
+    padding: 2rem 0 6rem 0;
+  }
+  .about .container h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  .about .container p {
+    font-size: 1.4rem;
+  }
+  .challenges {
+    width: 80vw;
+    margin-bottom: 6rem;
+  }
+  .challenges .container1 h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+  }
+  .challenges .container1 p {
+    font-size: 1.2rem;
+  }
+  .challenges .container2 {
+    margin-top: 4rem;
+  }
+  .challenges .container2 .box h5 {
+    font-size: 2.4rem;
+  }
+  .challenges .container2 .box p {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+  .solutions {
+    margin-bottom: 6rem;
+    padding: 6rem 0;
+  }
+  .solutions .upper-container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .solutions .upper-container h4 {
+    font-size: 2.4rem;
+  }
+  .solutions .upper-container p {
+    font-size: 1.1rem;
+    margin-top: 0rem;
+  }
+  .solutions .lower-container {
+    width: 80vw;
+  }
+  .solutions .lower-container .leftDiv .solution {
+    margin-top: 3rem;
+  }
+  .solutions .lower-container .leftDiv .solution .icon .iconify {
+    font-size: 4rem;
+  }
+  .solutions .lower-container .leftDiv .solution .text {
+    padding-top: 0.7rem;
+    width: 100%;
+  }
+  .solutions .lower-container .leftDiv .solution .text h6 {
+    font-size: 1.2rem;
+  }
+  .solutions .lower-container .leftDiv .solution .text p {
+    font-size: 1.1rem;
+  }
+  .solutions .lower-container .rightDiv {
+    display: none;
+  }
+  .bottom-section {
+    width: 80vw;
+    height: 450px;
+    margin-bottom: 8rem;
+  }
+  .bottom-section .inner-left {
+    width: 50%;
+  }
+  .bottom-section .inner-right {
+    padding: 2rem;
+  }
+  .bottom-section .inner-right h6 {
+    font-size: 1.2rem;
+  }
+  .bottom-section .inner-right p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  .bottom-section .inner-right .btn-link .btn {
+    font-size: 0.7rem;
+  }
+  .bottom-section .inner-right .socials ul {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: -0.5rem;
+  }
+  .bottom-section .inner-right .socials ul li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    transition: 0.5s ease;
+  }
+  .bottom-section .inner-right .socials ul li a {
+    font-size: 1.2rem;
+  }
+  footer {
+    width: 80vw;
+  }
+  footer .footer-container .logo img {
+    height: 120px;
+  }
+  footer .footer-container .links ul li {
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .links ul li a {
+    font-size: 1.1rem;
+  }
+  footer .footer-container .connect p {
+    font-size: 1.2rem;
+  }
+  footer .footer-container .connect .socials {
+    margin-top: 2rem;
+  }
+  footer .footer-container .connect .socials ul {
+    gap: 0.5rem;
+  }
+  footer .footer-container .connect .socials ul li {
+    margin-bottom: 0.5rem;
+  }
+  footer .footer-container .connect .socials ul li a {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  footer .footer-container .connect #mailTo {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1300px) {
+  header .nav-container {
+    padding-left: 50px;
+  }
+  header .nav-container .logo img {
+    max-height: 66px;
+  }
+  header .nav-container nav {
+    margin-left: -66px;
+  }
+  header .nav-container nav ul li {
+    margin-left: 1rem;
+  }
+  header .nav-container nav ul li a {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .btn-link .btn {
+    font-size: 1rem;
+  }
+  .intro {
+    margin-top: 11rem;
+  }
+  .intro h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .intro .text {
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 0rem;
+    line-height: 2.4rem;
+  }
+  .intro #mangoesPic {
+    height: 470px;
+    max-width: 850px;
+  }
+  .about {
+    margin: 6rem 0;
+  }
+  .about .container {
+    width: 70vw;
+    padding: 2rem 0 6rem 0;
+  }
+  .about .container h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  .about .container p {
+    font-size: 1.4rem;
+  }
+  .challenges {
+    width: 80vw;
+    margin-bottom: 6rem;
+  }
+  .challenges .container1 h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+  }
+  .challenges .container1 p {
+    font-size: 1.2rem;
+  }
+  .challenges .container2 {
+    margin-top: 4rem;
+  }
+  .challenges .container2 .box h5 {
+    font-size: 2.4rem;
+  }
+  .challenges .container2 .box p {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+  .solutions {
+    margin-bottom: 6rem;
+    padding: 6rem 0;
+  }
+  .solutions .upper-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .solutions .upper-container h4 {
+    font-size: 2.4rem;
+  }
+  .solutions .upper-container p {
+    font-size: 1.1rem;
+    margin-top: 0rem;
+  }
+  .solutions .lower-container {
+    width: 90vw;
+  }
+  .solutions .lower-container .leftDiv .solution {
+    margin-top: 3rem;
+  }
+  .solutions .lower-container .leftDiv .solution .icon {
+    max-height: 100px;
+    min-width: 100px;
+  }
+  .solutions .lower-container .leftDiv .solution .icon .iconify {
+    font-size: 4rem;
+  }
+  .solutions .lower-container .leftDiv .solution .text {
+    padding-top: 0.7rem;
+    width: 100%;
+  }
+  .solutions .lower-container .leftDiv .solution .text h6 {
+    font-size: 1.1rem;
+  }
+  .solutions .lower-container .leftDiv .solution .text p {
+    font-size: 1rem;
+  }
+  .solutions .lower-container .rightDiv img {
+    max-width: 429px;
+    margin-top: 5.5rem;
+  }
+  .bottom-section {
+    width: 80vw;
+    min-height: 450px;
+  }
+  .bottom-section .inner-left {
+    width: 50%;
+  }
+  .bottom-section .inner-right h6 {
+    font-size: 1.2rem;
+  }
+  .bottom-section .inner-right p {
+    font-size: 1.2rem;
+  }
+  footer {
+    width: 80vw;
+  }
+  footer .footer-container .logo img {
+    height: 120px;
+  }
+  footer .footer-container .links ul li {
+    margin-bottom: 1rem;
+  }
+  footer .footer-container .links ul li a {
+    font-size: 1.1rem;
+  }
+  footer .footer-container .connect p {
+    font-size: 1.2rem;
+  }
+  footer .footer-container .connect .socials {
+    margin-top: 2rem;
+  }
+  footer .footer-container .connect .socials ul {
+    gap: 0.5rem;
+  }
+  footer .footer-container .connect .socials ul li {
+    margin-bottom: 0.5rem;
+  }
+  footer .footer-container .connect .socials ul li a {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  footer .footer-container .connect #mailTo {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

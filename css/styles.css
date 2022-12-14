@@ -168,6 +168,7 @@ header .nav-container nav ul li a:hover {
   background: inherit;
   border: none;
   color: #FEFFF3;
+  font-weight: 600;
   font-size: 1.25rem;
   padding: 1.4rem 4rem;
   border-radius: 40px;
